@@ -6,7 +6,7 @@
 
 @section('content')
   @while(have_posts()) @php the_post() @endphp
-    @include('partials.page-header')
+    @include('modules.template-home.hero')
     @include('partials.content-page')
   @endwhile
 @endsection

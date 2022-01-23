@@ -1,7 +1,92 @@
-.banner .nav li {
-  @extend .nav-item;
-}
 
-.banner .nav a {
-  @extend .nav-link;
+/* stylelint-disable no-descending-specificity */
+header {
+  > nav {
+    background-color: $secondary;
+
+    button.navbar-toggler {
+      box-shadow: none;
+    }
+
+    #main-nav-icon {
+      width: 40px;
+      height: 32px;
+      position: relative;
+      margin: 0;
+      transform: rotate(0deg);
+      transition: 0.5s ease-in-out;
+      cursor: pointer;
+
+      &.open {
+        span {
+          &:nth-child(1) {
+            transform: rotate(45deg);
+            top: 0;
+            left: 6px;
+          }
+
+          &:nth-child(2) {
+            width: 0%;
+            opacity: 0;
+          }
+
+          &:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 28px;
+            left: 6px;
+          }
+        }
+      }
+
+      span {
+        display: block;
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: 0.25s ease-in-out;
+
+        &:nth-child(1) {
+          top: 0;
+          transform-origin: left center;
+        }
+
+        &:nth-child(2) {
+          top: 14px;
+          transform-origin: left center;
+        }
+
+        &:nth-child(3) {
+          top: 28px;
+          transform-origin: left center;
+        }
+      }
+    }
+
+    .main-nav-menu-items_container {
+      width: 100%;
+
+      @media (min-width: 992px) {
+        margin-right: 1rem;
+      }
+
+      .main-nav-menu-items {
+        padding: 0;
+        margin: 0;
+
+        @media (min-width: 992px) {
+          display: flex;
+          justify-content: space-evenly;
+        }
+
+        .menu-item a {
+          color: white;
+        }
+      }
+    }
+  }
 }
