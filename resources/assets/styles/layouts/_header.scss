@@ -4,6 +4,10 @@ header {
   > nav {
     &.navbar {
       padding: 0;
+
+      .navbar-brand {
+        padding: 12px 0;
+      }
     }
 
     button.navbar-toggler {
@@ -76,6 +80,10 @@ header {
     .navbar-collapse {
       @media (min-width: 992px) {
         height: 72px;
+      }
+
+      @media (min-width: 1200px) {
+        height: 80px;
       }
     }
 
