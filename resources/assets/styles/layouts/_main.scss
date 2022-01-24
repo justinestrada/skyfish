@@ -1,0 +1,12 @@
+
+main {
+  padding-top: 64px;
+
+  @media (min-width: 992px) {
+    height: 72px;
+  }
+
+  @media (min-width: 1200px) {
+    height: 80px;
+  }
+}

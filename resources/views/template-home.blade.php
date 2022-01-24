@@ -7,6 +7,6 @@
 @section('content')
   @while(have_posts()) @php the_post() @endphp
     @include('modules.template-home.hero')
-    @include('partials.content-page')
+    @include('partials.flex-layouts')
   @endwhile
 @endsection

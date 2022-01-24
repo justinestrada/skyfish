@@ -2,10 +2,20 @@
 /* stylelint-disable no-descending-specificity */
 header {
   > nav {
-    background-color: $secondary;
+    &.navbar {
+      padding: 0;
+
+      .navbar-brand {
+        padding: 12px 0;
+      }
+    }
 
     button.navbar-toggler {
       box-shadow: none;
+
+      &:focus {
+        box-shadow: none;
+      }
     }
 
     #main-nav-icon {
@@ -64,6 +74,16 @@ header {
           top: 28px;
           transform-origin: left center;
         }
+      }
+    }
+
+    .navbar-collapse {
+      @media (min-width: 992px) {
+        height: 72px;
+      }
+
+      @media (min-width: 1200px) {
+        height: 80px;
       }
     }
 

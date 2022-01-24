@@ -1,6 +1,24 @@
 
+<style>
+@media (max-width: 991px) {
+  .navbar-collapse {
+    height: calc(100vh - 66px);
+    transition: all 500ms;
+  }
+  header > nav .main-nav-menu-items_container,
+  .main-nav-menu-items {
+    height: 100%;
+  }
+  .main-nav-menu-items {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;    
+  }
+}
+</style>
 <header>
-  <nav class="navbar navbar-expand-lg fixed-top">
+  <nav class="navbar navbar-expand-lg fixed-top bg-secondary">
     <div class="container">
       <a class="navbar-brand" href="{{ home_url('/') }}">
         <img src="{{ App\asset_path('images/logo.svg') }}" alt="{{ get_bloginfo('name', 'display') }}" style="height: 40px;"/>
@@ -21,9 +39,9 @@
             'container_class' => 'main-nav-menu-items_container'
           ]) !!}
         @endif
-      </div>
-      <div>
-        <img src="{{ App\asset_path('images/american-made.png') }}" alt="American Made" style="height: 32px;"/>
+        <div class="d-none d-lg-block">
+          <img src="{{ App\asset_path('images/american-made.png') }}" alt="American Made" style="height: 32px;"/>
+        </div>
       </div>
     </div>
   </nav>
