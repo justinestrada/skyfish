@@ -1,6 +1,6 @@
 
-<section id="hero" style="background-image: url('{{ App\asset_path('background.jpg') }}');">
-  <iframe id="hero_video" src="https://www.youtube.com/embed/uRktp0gCc0k?rel=0&autoplay=1&mute=1&showinfo=0&playlist=uRktp0gCc0k&controls=0" title="YouTube video" allowfullscreen></iframe>
+<section id="hero" style="background-image: url('{{ wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()) ) }}');">
+  <iframe id="hero_video" style="opacity: 0;" src="https://www.youtube.com/embed/uRktp0gCc0k?rel=0&autoplay=1&mute=1&showinfo=0&playlist=uRktp0gCc0k&controls=0" title="YouTube video" allowfullscreen></iframe>
   <div id="hero_inner">
     <div class="container">
       <h1 class="hero_inner_heading">Welcome to Skyfish</h1>

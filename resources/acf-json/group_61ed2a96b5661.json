@@ -3,10 +3,10 @@
     "title": "Template Home",
     "fields": [
         {
-            "key": "field_61ed2aa14b71d",
-            "label": "Content",
-            "name": "content",
-            "type": "flexible_content",
+            "key": "field_61edef59f88b2",
+            "label": "Hero",
+            "name": "hero",
+            "type": "clone",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,20 +15,34 @@
                 "class": "",
                 "id": ""
             },
-            "layouts": {
-                "layout_61ed2aa72736c": {
-                    "key": "layout_61ed2aa72736c",
-                    "name": "",
-                    "label": "",
-                    "display": "block",
-                    "sub_fields": [],
-                    "min": "",
-                    "max": ""
-                }
+            "clone": [
+                "group_61edef036e68c"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_61ee25d5c027f",
+            "label": "Content",
+            "name": "content",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
             },
-            "button_label": "Add Row",
-            "min": "",
-            "max": ""
+            "clone": [
+                "field_61ee1729dd99c"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         }
     ],
     "location": [
@@ -49,5 +63,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1642932908
+    "modified": 1642997229
 }
