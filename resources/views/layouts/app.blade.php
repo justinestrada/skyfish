@@ -6,9 +6,9 @@
     @include('partials.header')
     <main class="main" role="document">
       @yield('content')
+      @include('partials.footer')
     </main>
     @php do_action('get_footer') @endphp
-    @include('partials.footer')
     @php wp_footer() @endphp
   </body>
 </html>

@@ -12,6 +12,7 @@ use Roots\Sage\Template\BladeProvider;
  */
 add_action('wp_enqueue_scripts', function () {
   wp_enqueue_style('fonts-google-roboto-oswald', 'https://fonts.googleapis.com/css?family=Roboto:400,500,600,700,normal%7COpen+Sans:400,600,700%7COswald:400,500,600,700', false, null);
+  wp_enqueue_style('font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css?ver=4.4', false, null);
   wp_enqueue_style('bootstrap.min.css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css', false, null);
   wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
   wp_enqueue_script('bootstrap.bundle.min.js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js', ['jquery'], null, true);

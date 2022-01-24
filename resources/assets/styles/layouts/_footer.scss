@@ -1,0 +1,35 @@
+
+/* stylelint-disable no-descending-specificity */
+footer {
+  #footer_terrain_pattern {
+    background-size: cover;
+    background-position: center;
+    height: 5rem;
+  }
+
+  #footer_contact-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
+
+    li a {
+      color: $white;
+    }
+  }
+
+  .footer_menu-heading {
+    color: $white;
+  }
+
+  #footer_menu-links {
+    a {
+      color: $gray;
+    }
+  }
+
+  #footer_made-in-america-wrap svg {
+    width: 100%;
+  }
+}
