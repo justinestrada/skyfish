@@ -24,12 +24,3 @@
     </div>
   </div>
 </div>
-<section class="py-5" style="background-color: blue;">
-  <div class="container py-5 my-5"></div>
-</section>
-<section class="py-5" style="background-color: red;">
-  <div class="container py-5 my-5"></div>
-</section>
-<section class="py-5" style="background-color: green;">
-  <div class="container py-5 my-5"></div>
-</section>
