@@ -54,7 +54,7 @@
     @if ($menus = get_field('footer_menus', 'option'))
       <div id="footer_menu-links" class="row justify-content-center mb-5">
         @foreach($menus as $menu)
-          <div class="col-lg">
+          <div class="col-lg mb-3 mb-lg-0">
             <h5 class="footer_menu-heading">{!! $menu['heading'] !!}</h5>
             @foreach($menu['links'] as $link)
               <a href="{{ $link['link']['url'] }}" class="footer_link">
