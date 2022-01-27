@@ -134,3 +134,15 @@ add_action('after_setup_theme', function () {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
 });
+
+add_filter('wp_nav_menu_objects', function ( $items, $args ) {
+    foreach ( $items as &$item ) {
+        $image = get_field('image', $item);
+        $subtext = get_field('subtext', $item);
+        if ( $image ) {
+            $item->title = '<div class="menu-item-tier-2_wrap"><img src="' . $image['url'] . '" class="d-none d-md-block"/><div>' . $item->title . '</div> <div>' . $subtext . '</div></div>';
+        }
+    }
+    return $items;	
+}, 10, 2);
+

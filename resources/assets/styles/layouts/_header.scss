@@ -6,7 +6,8 @@ header {
       padding: 0;
 
       .navbar-brand {
-        padding: 12px 0;
+        padding: 12px;
+        margin: 0;
       }
     }
 
@@ -78,6 +79,11 @@ header {
     }
 
     .navbar-collapse {
+      @media (max-width: 991px) {
+        height: calc(100vh - 66px);
+        transition: all 500ms;
+      }
+
       @media (min-width: 992px) {
         height: 72px;
       }
@@ -88,7 +94,13 @@ header {
     }
 
     .main-nav-menu-items_container {
+      display: flex;
       width: 100%;
+      justify-content: center;
+
+      @media (max-width: 991px) {
+        height: 100%;
+      }
 
       @media (min-width: 992px) {
         margin-right: 1rem;
@@ -99,29 +111,81 @@ header {
         padding: 0;
         margin: 0;
 
+        @media (max-width: 991px) {
+          height: 100%;
+          display: flex;
+          justify-content: space-evenly;
+          flex-direction: column;
+          text-align: center;
+        }
+
         @media (min-width: 992px) {
           display: flex;
           justify-content: space-evenly;
         }
 
-        .menu-item a {
-          display: block;
-          padding: 0 0.25rem;
-          color: white;
-
-          &:hover,
-          &:focus {
-            background-color: $primary;
+        .menu-item {
+          @media (min-width: 992px) {
+            &.menu-item-has-children:hover .sub-menu,
+            &.menu-item-has-children:focus .sub-menu {
+              display: block;
+            }
           }
+
+          a {
+            display: block;
+            color: white;
+            padding: 0.325rem;
+            text-decoration: none;
+
+            &:hover,
+            &:focus {
+              background-color: $primary;
+            }
+
+            @media (min-width: 992px) {
+              height: 72px;
+              line-height: 72px;
+              padding: 0 0.25rem;
+            }
+
+            @media (min-width: 1200px) {
+              height: 80px;
+              line-height: 80px;
+            }
+          }
+        }
+
+        .sub-menu {
+          list-style: none;
+          padding: 0;
+          text-align: center;
 
           @media (min-width: 992px) {
-            height: 72px;
-            line-height: 72px;
+            display: none;
+            position: absolute;
+            padding: 0;
+            background-color: white;
           }
 
-          @media (min-width: 1200px) {
-            height: 80px;
-            line-height: 80px;
+          .menu-item a {
+            height: initial;
+            line-height: initial;
+            text-align: left;
+            color: #555;
+            background-color: white;
+            padding: 24px 16px;
+
+            &:hover,
+            &:focus {
+              color: #555 !important;
+              background-color: white !important;
+            }
+
+            img {
+              height: 56px;
+              margin-bottom: 8px;
+            }
           }
         }
       }

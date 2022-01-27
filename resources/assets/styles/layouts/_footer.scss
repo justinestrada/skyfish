@@ -45,11 +45,16 @@ footer {
     display: flex;
     padding: 0;
     justify-content: center;
-  
+
     li {
       a {
         color: white;
         padding: 0.5rem;
+        margin-right: 1rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
   }

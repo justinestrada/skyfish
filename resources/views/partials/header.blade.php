@@ -1,22 +1,4 @@
 
-<style>
-@media (max-width: 991px) {
-  .navbar-collapse {
-    height: calc(100vh - 66px);
-    transition: all 500ms;
-  }
-  header > nav .main-nav-menu-items_container,
-  .main-nav-menu-items {
-    height: 100%;
-  }
-  .main-nav-menu-items {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    text-align: center;    
-  }
-}
-</style>
 <header>
   <nav class="navbar navbar-expand-lg fixed-top bg-secondary">
     <div class="container">
@@ -46,3 +28,8 @@
     </div>
   </nav>
 </header>
+<script>
+(function($) {
+
+}, (jQuery))
+</script>
