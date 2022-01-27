@@ -92,6 +92,7 @@ Edit `app/setup.php` to enable or disable theme features, setup navigation menus
 
 * `yarn start` — Compile assets when file changes are made, start Browsersync session
 * `yarn build` — Compile and optimize the files in your assets directory
+* `sudo yarn build` - I get an error if I dont use `sudo` - Justin
 * `yarn build:production` — Compile assets for production
 
 ## Documentation
