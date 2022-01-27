@@ -1,6 +1,11 @@
 
-<section id="hero" style="background-image: url('{{ wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()) ) }}');">
-  <iframe id="hero_video" style="opacity: 0;" src="https://www.youtube.com/embed/uRktp0gCc0k?rel=0&autoplay=1&mute=1&showinfo=0&playlist=uRktp0gCc0k&controls=0" title="YouTube video" allowfullscreen></iframe>
+@php
+$post_id = get_the_ID();
+@endphp
+<section id="hero" style="background-image: url('{{ wp_get_attachment_url( get_post_thumbnail_id($post_id) ) }}');">
+  @if ($yt_id = get_field('youtube_id', $post_id))
+    <iframe id="hero_video" src="https://www.youtube.com/embed/{{ $yt_id }}?rel=0&autoplay=1&mute=1&showinfo=0&playlist={{ $yt_id }}&controls=0&loop=1" title="YouTube video" allowfullscreen></iframe>
+  @endif
   <div id="hero_inner">
     <div class="container">
       <h1 class="hero_inner_heading mb-lg-5">Welcome to Skyfish</h1>
