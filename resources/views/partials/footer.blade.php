@@ -1,7 +1,7 @@
 
 <footer class="bg-secondary">
   <div id="footer_terrain_pattern" style="background-image: url('{{ App\asset_path('images/terrain-pattern.jpg') }}');"></div>
-  <div class="container py-5">
+  <div class="container-xxl py-5">
     <div class="row mb-5">
       <div class="col text-center">
         <a href="{{ home_url('/') }}">
