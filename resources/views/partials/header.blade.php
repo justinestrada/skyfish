@@ -1,7 +1,17 @@
 
+<style>
+header > nav .main-nav-menu-items_container .main-nav-menu-items .sub-menu .menu-item a img {
+  margin-bottom: 1rem;
+}
+@media (min-width: 992px) {
+  header > nav .main-nav-menu-items {
+    column-gap: 1rem;
+  }
+}
+</style>
 <header>
   <nav class="navbar navbar-expand-lg fixed-top bg-secondary">
-    <div class="container">
+    <div class="container-xxl">
       <a class="navbar-brand" href="{{ home_url('/') }}">
         <img src="{{ App\asset_path('images/logo.svg') }}" alt="{{ get_bloginfo('name', 'display') }}" style="height: 40px;"/>
         <span class="sr-only">{{ get_bloginfo('name', 'display') }}</span>
