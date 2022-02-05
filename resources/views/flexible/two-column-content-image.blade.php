@@ -28,13 +28,13 @@ $section_padding = get_sub_field('padding');
       <div class="content-and-image_content col-lg-6">
         <div>
           @if ($subheading = get_sub_field('subheading'))
-            <p class="text-gray">{!! $subheading !!}</p>
+            <p class="flex-layout_subheading text-gray mb-3">{!! $subheading !!}</p>
           @endif
           @if ($heading = get_sub_field('heading'))
-            <h2>{!! $heading !!}</h2>
+            <h2 class="flex-layout_heading mb-3">{!! $heading !!}</h2>
           @endif
           @if ($content = get_sub_field('content'))
-            <div>{!! $content !!}</div>
+            <div class="flex-layout_inner-content mb-3">{!! $content !!}</div>
           @endif
           @if ($button = get_sub_field('button'))
             <div>

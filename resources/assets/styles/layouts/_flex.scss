@@ -20,4 +20,10 @@
     display: flex;
     align-items: center;
   }
+
+  .flex-layout_heading {
+    @media (min-width: 1200px) {
+      font-size: 56px;
+    }
+  }
 }
