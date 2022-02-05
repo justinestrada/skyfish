@@ -21,7 +21,7 @@ header > nav .main-nav-menu-items_container .main-nav-menu-items .sub-menu .menu
           <span></span>
           <span></span>
           <span></span>
-        </div>        
+        </div>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         @if (has_nav_menu('primary_navigation'))
@@ -38,8 +38,3 @@ header > nav .main-nav-menu-items_container .main-nav-menu-items .sub-menu .menu
     </div>
   </nav>
 </header>
-<script>
-(function($) {
-
-}, (jQuery))
-</script>

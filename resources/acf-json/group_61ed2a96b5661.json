@@ -26,7 +26,7 @@
         {
             "key": "field_61ee25d5c027f",
             "label": "Content",
-            "name": "content",
+            "name": "layouts",
             "type": "clone",
             "instructions": "",
             "required": 0,
@@ -63,5 +63,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1642997229
+    "modified": 1643975524
 }
