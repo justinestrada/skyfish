@@ -6,14 +6,14 @@ $section_padding = get_sub_field('padding');
 @endphp
 @if ($background['overlay'])
   <style>
-  .flex-layout_overlay {
+  #flex-layout_{{ $layout_key }} .flex-layout_overlay {
     background-color: {{ $background['overlay']['color'] }};
     opacity: {{ $background['overlay']['opacity'] }};
   }
   </style>
 @endif
-<section class="flex-layout flex-layout_content-and-image bg-{{ $background['color'] }} text-{{ $color }} {{ $section_padding }}"
-    {!! isset($background['image']) ? 'style="background-image: url(' . $background['image']['url'] . ');"' : '' !!}
+<section id="flex-layout_{{ $layout_key }}" class="flex-layout flex-layout_content-and-image bg-{{ $background['color'] }} text-{{ $color }} {{ $section_padding }}"
+    {!! (isset($background['image']) && $background['image']) ? 'style="background-image: url(' . $background['image']['url'] . ');"' : '' !!}
   >
   @if ($background['overlay'])
     <div class="flex-layout_overlay"></div>
@@ -25,7 +25,7 @@ $section_padding = get_sub_field('padding');
           <img src="{{ $image['url'] }}" alt="{{ $image['alt'] }}" class="w-100"/>
         </div>
       @endif
-      <div class="content-and-image_content col-lg-6">
+      <div class="flex-layout_content-col col-lg-6">
         <div>
           @if ($subheading = get_sub_field('subheading'))
             <p class="flex-layout_subheading text-gray mb-3">{!! $subheading !!}</p>
