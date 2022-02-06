@@ -1,12 +1,13 @@
 
 main {
   padding-top: 64px;
+  overflow-x: hidden;
 
   @media (min-width: 992px) {
-    height: 72px;
+    padding-top: 72px;
   }
 
   @media (min-width: 1200px) {
-    height: 80px;
+    padding-top: 80px;
   }
 }

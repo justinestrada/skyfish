@@ -1,8 +1,18 @@
 
-.btn-primary,
-.btn-primary:focus,
-.btn-primary:hover {
+.btn {
+  transition: all 500ms;
+  border-radius: 0;
+}
+
+.btn-primary {
   color: $white;
   background-color: $primary;
+  border-color: $primary;
+}
+
+.btn-primary:focus,
+.btn-primary:hover {
+  color: $primary;
+  background-color: $secondary;
   border-color: $primary;
 }

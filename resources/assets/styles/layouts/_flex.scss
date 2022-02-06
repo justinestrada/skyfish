@@ -5,7 +5,20 @@
   &.viewport_height {
     display: flex;
     align-items: center;
-    height: 100vh;
+    min-height: 512px;
+    height: calc(100vh - 64px);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-size: cover;
+    background-position: center;
+
+    @media (min-width: 992px) {
+      height: calc(100vh - 72px);
+    }
+
+    @media (min-width: 1200px) {
+      height: calc(100vh - 80px);
+    }
   }
 
   &_overlay {

@@ -4,19 +4,13 @@ $background = get_sub_field('background');
 $color = get_sub_field('color');
 $section_padding = get_sub_field('padding');
 @endphp
-@if ($background['overlay'])
-  <style>
-  #flex-layout_{{ $layout_key }} .flex-layout_overlay {
-    background-color: {{ $background['overlay']['color'] }};
-    opacity: {{ $background['overlay']['opacity'] }};
-  }
-  </style>
-@endif
 <section id="flex-layout_{{ $layout_key }}" class="flex-layout flex-layout_image-and-content bg-{{ $background['color'] }} text-{{ $color }} {{ $section_padding }}"
     {!! (isset($background['image']) && $background['image']) ? 'style="background-image: url(' . $background['image']['url'] . ');"' : '' !!}
   >
   @if ($background['overlay'])
-    <div class="flex-layout_overlay"></div>
+    <div class="flex-layout_overlay"
+      style="background-color: {{ $background['overlay']['color'] }}; opacity: {{ $background['overlay']['opacity'] }};"
+    ></div>
   @endif
   <div class="container-xxl">
     <div class="row">
@@ -39,7 +33,7 @@ $section_padding = get_sub_field('padding');
           @if ($button = get_sub_field('button'))
             <div>
               <a href="{{ $button['link']['url'] }}" title="{{ $button['link']['title'] }}"
-                  class="btn btn-primary"
+                  class="btn btn-{{ $button['type'] }}"
                   {!! ($button['link']['target'] !== '') ? 'target="' . $button['link']['target'] . '"' : '' !!}
                 >
                 {{ $button['link']['title'] }}
