@@ -34,9 +34,15 @@
     align-items: center;
   }
 
-  .flex-layout_heading {
+  &_heading {
     @media (min-width: 1200px) {
       font-size: 56px;
+    }
+  }
+
+  &_inner-content {
+    @media (min-width: 1200px) {
+      font-size: 1.25rem;
     }
   }
 }
