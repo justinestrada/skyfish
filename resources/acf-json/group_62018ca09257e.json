@@ -1,9 +1,9 @@
 {
-    "key": "group_61ed2a96b5661",
-    "title": "Template Home",
+    "key": "group_62018ca09257e",
+    "title": "Template Industries",
     "fields": [
         {
-            "key": "field_61edef59f88b2",
+            "key": "field_6201acc9aa2ad",
             "label": "Hero",
             "name": "hero",
             "type": "clone",
@@ -24,7 +24,7 @@
             "prefix_name": 0
         },
         {
-            "key": "field_61ee25d5c027f",
+            "key": "field_6201ad16aa2ae",
             "label": "Content",
             "name": "layouts",
             "type": "clone",
@@ -48,9 +48,9 @@
     "location": [
         [
             {
-                "param": "post_template",
+                "param": "page_template",
                 "operator": "==",
-                "value": "views\/template-home.blade.php"
+                "value": "views\/template-industries.blade.php"
             }
         ]
     ],
@@ -62,5 +62,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1644278003
+    "modified": 1644278523
 }
