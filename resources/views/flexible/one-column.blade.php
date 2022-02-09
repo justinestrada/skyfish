@@ -15,7 +15,7 @@ $text_alignment = get_sub_field('text_alignment');
             </div>
           @endif
           @if ($content = get_sub_field('content'))
-              <div>{!! $content !!}</div>
+            <div>{!! $content !!}</div>
           @endif
         </div>
       </div>
