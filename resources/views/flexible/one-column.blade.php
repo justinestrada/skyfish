@@ -1,5 +1,6 @@
 @php
 $section_padding = get_sub_field('padding');
+$background = get_sub_field('background');
 $text_color = get_sub_field('color');
 $text_alignment = get_sub_field('text_alignment');
 @endphp
@@ -8,9 +9,7 @@ $text_alignment = get_sub_field('text_alignment');
     <div class="row">
       <div class="col">
         @if ($heading = get_sub_field('heading'))
-          <div class="card-title">
-            <h3>{!! $heading !!}</h3>
-          </div>
+          <h3 class="mb-3">{!! $heading !!}</h3>
         @endif
         @if ($content = get_sub_field('content'))
           <div>{!! $content !!}</div>
