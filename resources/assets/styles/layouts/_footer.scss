@@ -18,9 +18,13 @@ footer {
       justify-content: space-evenly;
     }
 
-    li a {
-      padding: 0.375rem 0.75rem;
-      color: $white;
+    li {
+      display: flex;
+
+      a {
+        padding: 0.375rem 0.75rem;
+        color: $white;
+      }
     }
   }
 
