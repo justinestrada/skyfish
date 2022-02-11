@@ -1,5 +1,4 @@
 @php
-$background = get_sub_field('background');
 $section_padding = get_sub_field('padding');
 $text_color = get_sub_field('color');
 $text_alignment = get_sub_field('text_alignment');

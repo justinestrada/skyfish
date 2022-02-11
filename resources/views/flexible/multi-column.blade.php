@@ -16,11 +16,9 @@ $section_padding = get_sub_field('padding');
       @if ($columns = get_sub_field('columns'))
         @foreach ($columns as $key => $card)
           <div class="col-lg mb-4 mb-lg-0">
-            <div class="card-body">
             @if ($card['content'])
-                <div>{!! $card['content'] !!}</div>
+              <div>{!! $card['content'] !!}</div>
             @endif
-            </div>
           </div>
         @endforeach
       @endif
