@@ -12,7 +12,7 @@
       <div class="row">
         <div class="col text-{{ $hero['text']['alignment'] }} text-{{ $hero['text']['color'] }}">
           <h1 class="d-none">{!! get_the_title() !!}</h1>
-          <h3 class="mb-0">{!! $hero['subheading'] !!}</h3>
+          <p id="hero_industries_subheading" class="mb-0">{!! $hero['subheading'] !!}</p>
         </div>
       </div>
     </div>
