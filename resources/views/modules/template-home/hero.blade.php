@@ -10,6 +10,21 @@ $background = get_field('background');
   #hero {
     background-image: url('{{ $background['desktop_image']['url'] }}');
   }
+  #hero::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    background-image: url('{{ App\asset_path('images/mountainous-bottom-pattern.png') }}');
+    height: 64px;
+    bottom: 0;
+    background-position: center;
+    background-size: cover;
+  }
+}
+@media (min-width: 1200px) {
+  #hero::after {
+    height: 72px;
+  }
 }
 </style>
 <section id="hero">
