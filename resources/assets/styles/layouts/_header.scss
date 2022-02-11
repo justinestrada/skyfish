@@ -65,7 +65,9 @@ header {
         .icon-bar:nth-of-type(3) {
           transform: rotate(0);
         }
+      }
 
+      &:not(.collapsed) {
         .icon-bar:first-child,
         .icon-bar:last-child {
           position: relative;
