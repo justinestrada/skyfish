@@ -1,9 +1,19 @@
 
 @php
-$post_id = get_the_ID();
+$background = get_field('background');
 @endphp
-<section id="hero" style="background-image: url('{{ wp_get_attachment_url( get_post_thumbnail_id($post_id) ) }}');">
-  @if ($yt_id = get_field('youtube_id', $post_id))
+<style>
+#hero {
+  background-image: url('{{ $background['mobile_image']['url'] }}');
+}
+@media (min-width: 992px) {
+  #hero {
+    background-image: url('{{ $background['desktop_image']['url'] }}');
+  }
+}
+</style>
+<section id="hero">
+  @if ($yt_id = get_field('youtube_id'))
     <iframe id="hero_video" src="https://www.youtube.com/embed/{{ $yt_id }}?rel=0&autoplay=1&mute=1&showinfo=0&playlist={{ $yt_id }}&controls=0&loop=1" title="YouTube video" allowfullscreen></iframe>
   @endif
   <div id="hero_inner">
@@ -23,7 +33,7 @@ $post_id = get_the_ID();
       <div class="modal-body">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         <div class="ratio ratio-16x9">
-          <iframe src="https://www.youtube.com/embed/jGwIUexJbD4?rel=0" title="YouTube video" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/{{ $yt_id }}?rel=0" title="YouTube video" allowfullscreen></iframe>
         </div>  
       </div>
     </div>

@@ -5,7 +5,11 @@
   background-size: cover;
   background-position: center;
   min-height: 512px;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 64px);
+
+  @media (min-width: 992px) {
+    height: calc(100vh - 72px);
+  }
 
   > #hero_video {
     display: none;
