@@ -23,8 +23,10 @@ const routes = new Router({
 // Load Events
 jQuery(document).ready(() => routes.loadEvents());
 
+import { Header } from './layouts/header'
 import { Hero } from './layouts/hero'
 
 jQuery(document).ready(function() {
+  Header.onLoad()
   Hero.onLoad()
 })

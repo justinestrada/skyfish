@@ -9,7 +9,7 @@ header > nav .main-nav-menu-items_container .main-nav-menu-items .sub-menu .menu
   }
 }
 </style>
-<header>
+<header id="main-nav">
   <nav class="navbar navbar-expand-lg fixed-top bg-secondary">
     <div class="container-xxl">
       <a class="navbar-brand" href="{{ home_url('/') }}">

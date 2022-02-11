@@ -33,7 +33,7 @@ $section_padding = get_sub_field('padding');
           @if ($button = get_sub_field('button'))
             <div>
               <a href="{{ $button['link']['url'] }}" title="{{ $button['link']['title'] }}"
-                  class="btn btn-{{ $button['type'] }}"
+                  class="btn btn-{{ $button['type'] }} border-corners"
                   {!! ($button['link']['target'] !== '') ? 'target="' . $button['link']['target'] . '"' : '' !!}
                 >
                 {{ $button['link']['title'] }}

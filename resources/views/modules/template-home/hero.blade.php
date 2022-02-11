@@ -21,7 +21,7 @@ $background = get_field('background');
       <h1 class="hero_inner_heading mb-lg-5">Welcome to Skyfish</h1>
       <p class="hero_inner_subheading mb-lg-5" style="font-size: 24px;">The future of precise drone data collection
       and analysis.<br>The autonomous drone platform designed to inspect, measure, map, and model critical infrastructure.</p>
-      <button type="button" class="btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#heroModal">
+      <button type="button" class="btn btn-lg btn-primary border-corners" data-bs-toggle="modal" data-bs-target="#heroModal">
         Watch Skyfish Platform Overview
       </button>      
     </div>

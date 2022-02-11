@@ -1,0 +1,34 @@
+
+/* stylelint-disable function-parentheses-space-inside */
+
+.border-corners {
+  position: relative;
+
+  --bGapSize: 12;
+  --bBorderSize: 2;
+  --color: white;
+}
+
+.border-corners_white {
+  --color: white;
+}
+
+.border-corners::before,
+.border-corners::after {
+  position: absolute;
+  top: -2px;
+  height: calc(100% + 4px);
+  background-color: var(--color);
+  content: "";
+  width: calc(var(--bGapSize) * 0.1rem);
+  clip-path: polygon(calc(100% - ( var(--bBorderSize) * 1px ) ) calc( ( var(--bGapSize) * 1px ) ), calc(100% - ( var(--bBorderSize) * 1px ) ) calc( ( var(--bBorderSize) * 1px ) ), calc(100% - ( (var(--bGapSize) ) * 1px ) ) calc( var(--bBorderSize) * 1px ), calc(100% - ( (var(--bGapSize) ) * 1px ) ) 0, 100% 0, 100% calc( ( var(--bGapSize) * 1px ) ), 100% calc(100% - (var(--bGapSize) ) * 1px ), calc(100% - ( var(--bBorderSize) * 1px ) ) calc( 100% - ( var(--bGapSize) * 1px ) ), calc(100% - ( var(--bBorderSize) * 1px ) ) calc( 100% - ( var(--bBorderSize) * 1px ) ), calc(100% - ( (var(--bGapSize) ) * 1px ) ) calc( 100% - ( var(--bBorderSize) * 1px ) ), calc(100% - ( (var(--bGapSize) ) * 1px ) ) 100%, 100% 100%, 100% calc( ( var(--bGapSize) * 1px ) ));
+}
+
+.border-corners::before {
+  left: -2px;
+  transform: scaleX(-1);
+}
+
+.border-corners::after {
+  right: -2px;
+}
