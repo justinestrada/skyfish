@@ -29,6 +29,16 @@
   padding-bottom: 6rem !important;
 }
 
+.my-10,
+.mt-10 {
+  margin-top: 6rem !important;
+}
+
+.my-10,
+.mb-10 {
+  margin-bottom: 6rem !important;
+}
+
 @media (min-width: 992px) {
   .py-lg-20,
   .pt-lg-20 {
@@ -58,5 +68,15 @@
   .py-lg-10,
   .pb-lg-10 {
     padding-bottom: 6rem !important;
+  }
+
+  .my-lg-10,
+  .mt-lg-10 {
+    margin-top: 6rem !important;
+  }
+
+  .my-lg-10,
+  .mb-lg-10 {
+    margin-bottom: 6rem !important;
   }
 }
