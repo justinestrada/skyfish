@@ -1,5 +1,11 @@
-<section id="flex-layout_{{ $layout_key }}" class="flex-layout flex-layout_multi-column-card-icon-heading-content">
-  @if ($image = get_sub_field('image'))
-    <img src="{{ $image }}" class="w-100"/>
-  @endif
-</section>
+
+<style>
+
+</style>
+@if ($image = get_sub_field('image'))
+  @php ($parallax = get_sub_field('parallax'))
+  <section id="flex-layout_{{ $layout_key }}" class="flex-layout flex-layout_full-width-image {{  isset($parallax) && $parallax['enable'] ? 'flex-layout_full-width-image_parallax ' . $parallax['padding'] : ''  }}" style="background-image: url('{{ $image['url'] }}');">
+    <img src="{{ $image['url'] }}" alt="{{ $image['alt'] }}" class="w-100 {{ isset($parallax) && $parallax['enable'] ? 'd-lg-none' : '' }}"/>
+    &nbsp;
+  </section>
+@endif

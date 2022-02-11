@@ -1,4 +1,14 @@
 
+.py-20,
+.pt-20 {
+  padding-top: 12rem !important;
+}
+
+.py-20,
+.pb-20 {
+  padding-bottom: 12rem !important;
+}
+
 .py-15,
 .pt-15 {
   padding-top: 9rem !important;
@@ -6,7 +16,7 @@
 
 .py-15,
 .pb-15 {
-  padding-top: 9rem !important;
+  padding-bottom: 9rem !important;
 }
 
 .py-10,
@@ -17,4 +27,36 @@
 .py-10,
 .pb-10 {
   padding-bottom: 6rem !important;
+}
+
+@media (min-width: 992px) {
+  .py-lg-20,
+  .pt-lg-20 {
+    padding-top: 12rem !important;
+  }
+
+  .py-lg-20,
+  .pb-lg-20 {
+    padding-bottom: 12rem !important;
+  }
+
+  .py-lg-15,
+  .pt-lg-15 {
+    padding-top: 9rem !important;
+  }
+
+  .py-lg-15,
+  .pb-lg-15 {
+    padding-bottom: 9rem !important;
+  }
+
+  .py-lg-10,
+  .pt-lg-10 {
+    padding-top: 6rem !important;
+  }
+
+  .py-lg-10,
+  .pb-lg-10 {
+    padding-bottom: 6rem !important;
+  }
 }

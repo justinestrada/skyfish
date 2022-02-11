@@ -1916,8 +1916,8 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "url",
-                            "preview_size": "full",
+                            "return_format": "array",
+                            "preview_size": "medium_large",
                             "library": "all",
                             "min_width": "",
                             "min_height": "",
@@ -1926,6 +1926,78 @@
                             "max_height": "",
                             "max_size": "",
                             "mime_types": ""
+                        },
+                        {
+                            "key": "field_62061a17f9912",
+                            "label": "Parallax",
+                            "name": "parallax",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6206169774683",
+                                    "label": "Enable",
+                                    "name": "enable",
+                                    "type": "true_false",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 0,
+                                    "ui_on_text": "",
+                                    "ui_off_text": ""
+                                },
+                                {
+                                    "key": "field_620619bb4e830",
+                                    "label": "Padding",
+                                    "name": "padding",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_6206169774683",
+                                                "operator": "==",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "viewport_height": "Viewport Height",
+                                        "py-lg-20": "Extra Large",
+                                        "py-lg-15": "Large",
+                                        "py-lg-10": "Medium",
+                                        "py-lg-5": "Small"
+                                    },
+                                    "default_value": false,
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "return_format": "value",
+                                    "ajax": 0,
+                                    "placeholder": ""
+                                }
+                            ]
                         }
                     ],
                     "min": "",
@@ -1955,5 +2027,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1644565852
+    "modified": 1644567629
 }

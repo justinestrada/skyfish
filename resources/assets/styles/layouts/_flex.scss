@@ -45,4 +45,15 @@
       font-size: 1.25rem;
     }
   }
+
+  &_full-width-image {
+    &_parallax {
+      background-position: center;
+      background-size: cover;
+
+      @media (min-width: 1200px) {
+        background-attachment: fixed;
+      }
+    }
+  }
 }
