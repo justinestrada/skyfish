@@ -910,7 +910,7 @@
                                         "white": "White",
                                         "transparent": "Transparent"
                                     },
-                                    "default_value": "transparent",
+                                    "default_value": "secondary",
                                     "allow_null": 0,
                                     "multiple": 0,
                                     "ui": 0,
@@ -1955,5 +1955,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1644563953
+    "modified": 1644565852
 }
