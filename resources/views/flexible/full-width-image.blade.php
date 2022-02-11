@@ -1,7 +1,4 @@
 
-<style>
-
-</style>
 @if ($image = get_sub_field('image'))
   @php ($parallax = get_sub_field('parallax'))
   <section id="flex-layout_{{ $layout_key }}" class="flex-layout flex-layout_full-width-image {{  isset($parallax) && $parallax['enable'] ? 'flex-layout_full-width-image_parallax ' . $parallax['padding'] : ''  }}" style="background-image: url('{{ $image['url'] }}');">
