@@ -1,4 +1,13 @@
 /* stylelint-disable no-descending-specificity */
+
+.jck_ab_showing {
+  header {
+    > nav {
+      margin-top: 31.9886px;
+    }
+  }
+}
+
 header {
   > nav {
     &.navbar {

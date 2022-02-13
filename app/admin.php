@@ -23,7 +23,16 @@ add_action('customize_preview_init', function () {
     wp_enqueue_script('sage/customizer.js', asset_path('scripts/customizer.js'), ['customize-preview'], null, true);
 });
 
+$template_directory = get_template_directory();
+
 /**
  * ACF
  */
-require_once( get_template_directory() . '/../app/admin/acf.php' );
+require_once( $template_directory . '/../app/admin/acf.php' );
+
+/**
+ * Jobs
+ */
+require_once( $template_directory . '/../app/admin/jobs.php' );
+
+
