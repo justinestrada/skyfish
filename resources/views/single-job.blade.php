@@ -1,6 +1,3 @@
-{{--
-  Template Name: Careers
---}}
 
 @extends('layouts.app')
 
@@ -25,15 +22,8 @@
     }
     </style>
     <div class="main_inner pb-lg-5">
-      @include('partials.page-header')
-      <section class="container bg-black relative text-white pt-5 px-lg-5 mb-lg-10">
-        <div class="row justify-content-center mb-5">
-          <div class="col fs-lg-1.25">
-            {!! get_the_content() !!}
-          </div>
-        </div>
-        @include('modules.template-careers.jobs')
-      </section>
+      @include('partials.content-job')
     </div>
   @endwhile
 @endsection
+  
