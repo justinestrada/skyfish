@@ -10,7 +10,7 @@
     <div class="carousel-inner">
       @foreach(get_sub_field('slides') as $key => $value)
         <div class="carousel-item {{ $key === 0 ? 'active' : '' }}">
-          <img src="{{ $value['image']['url'] }}" class="d-block w-100" alt="{{ $value['image']['alt'] }}">
+          <img src="{{ $value['image']['url'] }}" class="d-block w-100" alt="{{ $value['image']['alt'] }}" loading="lazy"/>
         </div>
       @endforeach
     </div>
