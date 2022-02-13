@@ -29,6 +29,11 @@
     height: 100%;
   }
 
+  &_image-col {
+    display: flex;
+    align-items: center;
+  }
+
   &_content-col {
     display: flex;
     align-items: center;

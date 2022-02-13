@@ -140,7 +140,7 @@
             },
             "collapsed": "",
             "min": 0,
-            "max": 0,
+            "max": 5,
             "layout": "table",
             "button_label": "Add Menu Column",
             "sub_fields": [
@@ -220,5 +220,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1643017744
+    "modified": 1644786659
 }

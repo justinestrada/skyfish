@@ -1,6 +1,6 @@
 
 <section id="jobs">
-  <h3 class="text-primary mb-4">Jobs Openings</h3>
+  <h3 class="text-primary mb-4">Job Openings</h3>
   @if ($jobs = get_posts(['post_type' => 'job']))
     <div class="row">
       @foreach ($jobs as $job)

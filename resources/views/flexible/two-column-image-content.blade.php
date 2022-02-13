@@ -15,7 +15,7 @@ $section_padding = get_sub_field('padding');
   <div class="container-xxl">
     <div class="row">
       @if ($image = get_sub_field('image'))
-        <div class="col-lg-6 mb-4 mb-lg-0">
+        <div class="flex-layout_image-col col-lg-6 mb-4 mb-lg-0">
           <img src="{{ $image['url'] }}" alt="{{ $image['alt'] }}" class="w-100"/>
         </div>
       @endif
