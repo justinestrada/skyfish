@@ -14,8 +14,8 @@
         <div class="row">
           @foreach ($metadata as $meta)
             <div class="col">
-              <div class="meta_label text-gray">{{ $meta['label'] }}</div>
-              <div class="meta_value">{{ $meta['value'] }}</div>
+              <div class="meta_label text-gray">{!! $meta['label'] !!}</div>
+              <div class="meta_value">{!! $meta['value'] !!}</div>
             </div>
           @endforeach
         </div>

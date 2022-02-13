@@ -1,34 +1,6 @@
 
-<style>
-.badge {
-  border-radius: 0;
-}
-.card-job:hover::before {
-  opacity: 1;
-}
-.card-job::before {
-  inset: 0px;
-  content: "";
-  position: absolute;
-  border-width: 2px;
-  border-style: solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to left, #f44518, #9e9e9e);
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out 0s;
-}
-.card-job .badge {
-  position: absolute;
-  top: 1.25rem;
-  right: 1.25rem;
-}
-.badge-new {
-  background-color: #f44518;
-  color: white;
-}
-</style>
 <section id="jobs">
-  <h3 class="d-none">Jobs Openings</h3>
+  <h3 class="text-primary mb-4">Jobs Openings</h3>
   @if ($jobs = get_posts(['post_type' => 'job']))
     <div class="row">
       @foreach ($jobs as $job)
