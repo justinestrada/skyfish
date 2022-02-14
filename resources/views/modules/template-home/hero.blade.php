@@ -48,7 +48,7 @@ $background = get_field('background');
       <div class="modal-body">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         <div class="ratio ratio-16x9">
-          <iframe src="https://www.youtube.com/embed/{{ $yt_id }}?rel=0" title="YouTube video" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/jGwIUexJbD4?rel=0" title="YouTube video" allowfullscreen></iframe>
         </div>  
       </div>
     </div>
