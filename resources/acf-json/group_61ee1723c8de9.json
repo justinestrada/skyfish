@@ -23,6 +23,25 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_6209cc69f6223",
+                            "label": "Section ID",
+                            "name": "section_id",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
                             "key": "field_61ee2f75b8b97",
                             "label": "Slides",
                             "name": "slides",
@@ -96,6 +115,25 @@
                     "label": "Multi Column",
                     "display": "block",
                     "sub_fields": [
+                        {
+                            "key": "field_6209cd43f6225",
+                            "label": "Section ID",
+                            "name": "section_id",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
                         {
                             "key": "field_61ff36ce8f2ac",
                             "label": "Content",
@@ -405,6 +443,25 @@
                     "label": "Multi Column Card Icon Heading Content",
                     "display": "block",
                     "sub_fields": [
+                        {
+                            "key": "field_6209cc84f6224",
+                            "label": "Section ID",
+                            "name": "section_id",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
                         {
                             "key": "field_61ff14227bfe7",
                             "label": "Content",
@@ -777,6 +834,25 @@
                     "label": "One Column",
                     "display": "block",
                     "sub_fields": [
+                        {
+                            "key": "field_6209cd8b6e2e2",
+                            "label": "Section ID",
+                            "name": "section_id",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
                         {
                             "key": "field_6202608905eb3",
                             "label": "Content",
@@ -1166,6 +1242,25 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_6209cda06e2e3",
+                            "label": "Section ID",
+                            "name": "section_id",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
                             "key": "field_61fdba119e2fa",
                             "label": "Content",
                             "name": "",
@@ -1534,6 +1629,25 @@
                     "label": "Two Column Image Content",
                     "display": "block",
                     "sub_fields": [
+                        {
+                            "key": "field_6209cdb66e2e4",
+                            "label": "Section ID",
+                            "name": "section_id",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
                         {
                             "key": "field_61fdc1c506230",
                             "label": "Content",
@@ -1904,6 +2018,25 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_6209cddf6e2e5",
+                            "label": "Section ID",
+                            "name": "section_id",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
                             "key": "field_6201b58cdc654",
                             "label": "Image",
                             "name": "image",
@@ -2027,5 +2160,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1644567629
+    "modified": 1644809729
 }
