@@ -1,5 +1,8 @@
 
 <style>
+.pillars:hover {
+  background-color: pink !important;
+}
 .pillars .pillar {
   display: flex;
   justify-content: flex-end;
@@ -25,14 +28,19 @@
   overflow: hidden;
   transition: all 1s;
 }
+.pillar:hover {
+  background-color: transparent;
+  background-image: none !important;
+}
 .pillar:hover .pillar_text_description {
   height: fit-content;
   /* background-color: blue; */
 }
 </style>
-<section id="solutions">
+<section id="solutions" class="py-10">
   <div class="container-xxl">
-    <div class="pillars bg-black row mb-5">
+    {{-- mb-5 --}}
+    <div class="pillars bg-black row">
       @if ($solutions = get_field('solutions'))
         @foreach ($solutions as $key => $solution)
           <a href="{{ get_permalink($solution['page']->ID) }}" class="pillar col-lg-3 text-center py-5" style="background-image: url('{{ $solution['icon']['url'] }}');">
@@ -47,3 +55,22 @@
     </div>
   </div>
 </section>
+<script>
+(function($) {
+const Solutions = {
+  onLoad: function() {
+    if (!$('#solutions').length) {
+      return
+    }
+    this.onMouseOverPillar()
+  },
+  onMouseOverPillar: function() {
+    $('.pillars').mouseover(function() {
+      const hover_background_image = $(this).attr('hover-background-image')
+      console.log('this', hover_background_image)
+    })
+  },
+}
+Solutions.onLoad()
+})(jQuery)
+</script>
