@@ -39,7 +39,8 @@ footer {
       text-align: left;
     }
 
-    a {
+    a.footer_link {
+      display: block;
       color: $gray;
     }
   }
