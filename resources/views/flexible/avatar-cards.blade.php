@@ -10,7 +10,7 @@ $text_alignment = get_sub_field('text_alignment');
         <div class="row">
             @if ($cards = get_sub_field('cards'))
                 @foreach ($cards as $key => $card)
-                    <div class="col-lg-4 mb-10">
+                    <div class="col-lg-4 pt-10 mb-10">
                         <div class="card text-{{ $text_alignment }} h-100">
                             @if ($card['linkedin_url'])
                                 <a href="{{ $card['linkedin_url'] }}" target="_blank" class="card-img-container">
