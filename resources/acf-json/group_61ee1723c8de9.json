@@ -2138,8 +2138,8 @@
                 },
                 "layout_620ba183b0330": {
                     "key": "layout_620ba183b0330",
-                    "name": "card_grid_column",
-                    "label": "Card Grid Column",
+                    "name": "avatar_cards",
+                    "label": "Avatar Cards",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -2238,6 +2238,22 @@
                                     "toolbar": "full",
                                     "media_upload": 1,
                                     "delay": 0
+                                },
+                                {
+                                    "key": "field_620d666b0bd3a",
+                                    "label": "LinkedIn Url",
+                                    "name": "linkedin_url",
+                                    "type": "url",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": ""
                                 }
                             ]
                         },
@@ -2499,5 +2515,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1644941828
+    "modified": 1645046705
 }
