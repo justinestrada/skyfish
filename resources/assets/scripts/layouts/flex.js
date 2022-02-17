@@ -15,8 +15,8 @@ export const Flex = {
         return
       }
       $(element).addClass('truncate')
-      const load_more_content = $(element).parent().find('.load-more-content')
-      load_more_content.on('click', function(){
+      const $btn_toggle_expand_bio = $(element).parent().find('.btn-toggle-expand-bio')
+      $btn_toggle_expand_bio.on('click', function(){
         if ($(element).hasClass('active')) {
           $(element).animate({height: '100px'}).removeClass('active')
           load_more_content.addClass('fa-angle-double-down')
