@@ -29,7 +29,10 @@ $text_alignment = get_sub_field('text_alignment');
                             <div class="card-body">
                                 <h5 class="card-title">{{ $card['heading'] }}</h5>
                                 <div class="card-text card-content">{!! $card['content'] !!}</div>
-                                <i class="fa fa-angle-double-down load-more-content"></i>
+                                <button class="btn btn-transparent btn-toggle-expand-bio">
+                                  <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+                                  <span class="sr-only">View More</span>
+                                </button>
                             </div>
                         </div>
                     </div>
