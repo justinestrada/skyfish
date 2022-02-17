@@ -9,9 +9,9 @@ export const Flex = {
     }
     $('.avatar-cards .card-content').map((k, element) => {
       const length = element.innerHTML.length;
-      const height = ($(element).height() + 50);
+      const height = ($(element).height() + 24);
       if (length < 256) {
-        $(element).closest('.load-more-content').hide()
+        $(element).closest('.btn-toggle-expand-bio').hide()
         return
       }
       $(element).addClass('truncate')
@@ -19,12 +19,10 @@ export const Flex = {
       $btn_toggle_expand_bio.on('click', function(){
         if ($(element).hasClass('active')) {
           $(element).animate({height: '100px'}).removeClass('active')
-          load_more_content.addClass('fa-angle-double-down')
-          load_more_content.removeClass('fa-angle-double-up')
+          $btn_toggle_expand_bio.removeClass('expanded')
         } else {
-          $(element).animate({height: height+'px'}).addClass('active')
-          load_more_content.removeClass('fa-angle-double-down')
-          load_more_content.addClass('fa-angle-double-up')
+          $(element).animate({height: `${height}px`}).addClass('active')
+          $btn_toggle_expand_bio.addClass('expanded')
         }
       })
     })
