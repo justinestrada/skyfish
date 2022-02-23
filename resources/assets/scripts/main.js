@@ -25,8 +25,10 @@ jQuery(document).ready(() => routes.loadEvents());
 
 import { Header } from './layouts/header'
 import { Hero } from './layouts/hero'
+import { Flex } from './layouts/Flex'
 
 jQuery(document).ready(function() {
   Header.onLoad()
   Hero.onLoad()
+  Flex.onLoad()
 })

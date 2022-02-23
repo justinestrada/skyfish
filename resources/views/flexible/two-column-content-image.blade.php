@@ -49,6 +49,7 @@
 $background = get_sub_field('background');
 $color = get_sub_field('color');
 $section_padding = get_sub_field('padding');
+$button = get_sub_field('button')
 @endphp
 @if ($background['overlay'])
   <style>
@@ -82,7 +83,7 @@ $section_padding = get_sub_field('padding');
           @if ($content = get_sub_field('content'))
             <div class="flex-layout_inner-content mb-3">{!! $content !!}</div>
           @endif
-          @if ($button = get_sub_field('button'))
+          @if ($button && $button['link'])
             <div>
               <a href="{{ $button['link']['url'] }}" title="{{ $button['link']['title'] }}"
                   class="btn btn-{{ $button['type'] }} border-corners"
