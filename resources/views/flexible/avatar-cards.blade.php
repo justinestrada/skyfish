@@ -1,10 +1,11 @@
 @php
 $background = get_sub_field('background');
-$section_padding = get_sub_field('padding');
+$padding_top = get_sub_field('padding_top');
+$padding_bottom = get_sub_field('padding_bottom');
 $text_alignment = get_sub_field('text_alignment');
 @endphp
 <section id="flex-layout_{{ $layout_key }}"
-  class="flex-layout avatar-cards pb-10 bg-{{ $background['color'] }} {{ $section_padding }}"
+  class="flex-layout avatar-cards bg-{{ $background['color'] }} {{ $padding_top }} {{ $padding_bottom }}"
   {!! isset($background['image']) && $background['image'] ? 'style="background-image: url(' . $background['image']['url'] . '); background-size: ' . $background['image_size'] . '; background-position: ' . $background['image_position'] . ';"' : '' !!}>
   <div class="container-xxl">
     <div class="row">
