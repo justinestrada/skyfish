@@ -1,5 +1,5 @@
 
-<section id="solutions" class="py-10">
+<section id="solutions" class="bg-black py-10">
   <div class="container-xxl">
     <div class="pillars bg-black row">
       @if ($solutions = get_field('solutions'))
