@@ -5,6 +5,7 @@
 
   &:hover .pillar {
     background-color: transparent;
+    background-image: none !important;
   }
 
   .pillars_bg {
@@ -23,13 +24,15 @@
   }
 
   .pillar {
+    position: relative;
     display: flex;
     justify-content: flex-end;
     min-height: 512px;
     padding-left: 0.125rem;
     padding-right: 0.125rem;
     border-right: 1px solid $white;
-    background-size: 64px;
+    // background-size: 64px;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 
@@ -41,11 +44,22 @@
       border-right: none;
     }
 
+    .pillar_inner-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
     .pillar_text {
       display: flex;
       justify-content: flex-end;
       align-content: center;
       flex-direction: column;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      z-index: 1;
 
       .pillar_text_description {
         &.pillar_text_description_initialized {
