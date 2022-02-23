@@ -3,6 +3,23 @@
     "title": "Page",
     "fields": [
         {
+            "key": "field_6215d2d953e96",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<hr>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
             "key": "field_61ee2e9924636",
             "label": "Hero",
             "name": "hero",
@@ -22,6 +39,23 @@
             "layout": "block",
             "prefix_label": 0,
             "prefix_name": 0
+        },
+        {
+            "key": "field_6215d2f2ff07e",
+            "label": "(copy)",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<hr>",
+            "new_lines": "wpautop",
+            "esc_html": 0
         },
         {
             "key": "field_61ee2eb624637",
@@ -425,7 +459,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1644278953
+    "show_in_rest": 0,
+    "modified": 1645597434
 }
