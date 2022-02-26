@@ -27,16 +27,16 @@ export const Header = {
     })
   },
   subMenuWidth: function() {
-    const menu_menu = $('#menu-menu')
+    const menu_menu = $('#menu-main')
     if (!menu_menu.length) {
       return
     }
     $('> li', menu_menu).map((i, e)=>{
       let sub_menu = $('ul.sub-menu', e);
-      if (!sub_menu) {
+      if (!sub_menu.length) {
         return;
       }
-      if($(window).width() > 991) {
+      if($(window).width() > 991) {  
         sub_menu.css('width', Math.round(menu_menu.width())+'px')
         sub_menu.css('left', Math.round(menu_menu.position().left)+'px')
       } else {
@@ -45,7 +45,7 @@ export const Header = {
     })
   },
   makeMenuResponsive: function() {
-    const menu_menu = $('#menu-menu')
+    const menu_menu = $('#menu-main')
     if (!menu_menu.length) {
       return
     }
@@ -54,7 +54,7 @@ export const Header = {
     }
     $('> li', menu_menu).map((i, e)=>{
       let sub_menu = $('ul.sub-menu', e);
-      if (!sub_menu) {
+      if (!sub_menu.length) {
         return;
       }
       $(e).off('click')
