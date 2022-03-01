@@ -1,7 +1,4 @@
 <style>
-header > nav .main-nav-menu-items_container .main-nav-menu-items .sub-menu .menu-item a img {
-  margin-bottom: 1rem;
-}
 @media (min-width: 992px) {
   header>nav .main-nav-menu-items {
     column-gap: 1rem;
@@ -26,7 +23,7 @@ header > nav .main-nav-menu-items_container .main-nav-menu-items .sub-menu .menu
           {!! wp_nav_menu([
           'theme_location' => 'primary_navigation',
           'menu_class' => 'main-nav-menu-items',
-          'container_class' => 'main-nav-menu-items_container',
+          'container_class' => 'main-nav-menu-items_container justify-content-start',
           ]) !!}
         @endif
         <div class="d-none d-lg-block">

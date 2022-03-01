@@ -140,9 +140,8 @@ add_filter('wp_nav_menu_objects', function ( $items, $args ) {
         $image = get_field('image', $item);
         $subtext = get_field('subtext', $item);
         if ( $image ) {
-            $item->title = '<div class="menu-item-tier-2_wrap"><img src="' . $image['url'] . '" class="d-none d-md-block"/><div>' . $item->title . '</div> <div>' . $subtext . '</div></div>';
+            $item->title = '<div class="menu-item-tier-2_wrap"><img src="' . $image['url'] . '"/><div class="menu-item-tier-2_wrap_content"><div class="menu-item-tier-2_wrap_content_title">' . $item->title . '</div> <div class="menu-item-tier-2_wrap_content_subtext">' . $subtext . '</div></div></div>';
         }
     }
     return $items;	
 }, 10, 2);
-
