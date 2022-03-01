@@ -30,7 +30,11 @@ header > nav .main-nav-menu-items_container .main-nav-menu-items .sub-menu .menu
           ]) !!}
         @endif
         <div class="d-none d-lg-block">
-          <img src="{{ App\asset_path('images/american-made.png') }}" alt="American Made" style="height: 32px;" />
+          {{-- <img src="{{ App\asset_path('images/american-made.png') }}" alt="American Made" style="height: 32px;" /> --}}
+          <a href="#">
+            <i class="fa fa-account mr-3" aria-hidden="true"></i>
+            Account
+          </a>
         </div>
       </div>
     </div>
