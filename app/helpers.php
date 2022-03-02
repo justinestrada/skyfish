@@ -136,3 +136,9 @@ function display_sidebar()
     isset($display) || $display = apply_filters('sage/display_sidebar', false);
     return $display;
 }
+
+function skyfish_convert_hex_color_to_rgb($hex)
+{
+    list($r, $g, $b) = sscanf($hex, "#%02x%02x%02x");
+    return [$r, $g, $b];
+}

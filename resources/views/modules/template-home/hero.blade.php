@@ -1,14 +1,14 @@
 
 @php
-$background = get_field('background');
+$hero = get_field('hero');
 @endphp
 <style>
 #hero {
-  background-image: url('{{ $background['mobile_image']['url'] }}');
+  background-image: url('{{ $hero['background']['mobile_image']['url'] }}');
 }
 @media (min-width: 992px) {
   #hero {
-    background-image: url('{{ $background['desktop_image']['url'] }}');
+    background-image: url('{{ $hero['background']['desktop_image']['url'] }}');
   }
   #hero::after {
     content: "";
@@ -31,14 +31,33 @@ $background = get_field('background');
   @if ($yt_id = get_field('youtube_id'))
     <iframe id="hero_video" src="https://www.youtube.com/embed/{{ $yt_id }}?rel=0&autoplay=1&mute=1&showinfo=0&playlist={{ $yt_id }}&controls=0&loop=1" title="YouTube video" allowfullscreen></iframe>
   @endif
-  <div id="hero_inner">
+  <div id="hero_inner"
+    @if (isset($hero['overlay']) && $hero['overlay']['enable'])
+      @php ($rgb_ar = App\skyfish_convert_hex_color_to_rgb($hero['overlay']['background_color']))
+      style="background-color: rgba({{ $rgb_ar[0] }}, {{ $rgb_ar[1] }}, {{ $rgb_ar[2] }}, {{ $hero['overlay']['opacity'] }});"
+    @endif
+    >
     <div class="container">
       <h1 class="hero_inner_heading mb-lg-5">Welcome to Skyfish</h1>
-      <p class="hero_inner_subheading mb-lg-5" style="font-size: 24px;">The future of precise drone data collection
-      and analysis.<br>The autonomous drone platform designed to inspect, measure, map, and model critical infrastructure.</p>
-      <button type="button" class="btn btn-lg btn-primary border-corners" data-bs-toggle="modal" data-bs-target="#heroModal">
-        Watch Skyfish Platform Overview
-      </button>      
+      @if ($hero['subheading'])
+        <p class="hero_inner_subheading mb-lg-5" style="font-size: 24px;">
+          {!! $hero['subheading'] !!}
+        </p>
+      @endif
+      @if ($hero['primary_button'] || $hero['secondary_button'])
+        <div>
+          @if ($hero['primary_button'])
+            <button type="button" class="btn btn-lg btn-primary border-corners {{ $hero['secondary_button'] ? 'mr-3' : '' }}" data-bs-toggle="modal" data-bs-target="#heroModal">
+              {{ $hero['primary_button']['title'] }}
+            </button>
+          @endif
+          @if ($hero['secondary_button'])
+            <a href="{{ $hero['secondary_button']['url'] }}" target="_blank" class="btn btn-lg btn-secondary border-corners">
+              {{ $hero['secondary_button']['title'] }}
+            </a>
+          @endif
+        </div>
+      @endif
     </div>
   </div>
 </section>
