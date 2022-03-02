@@ -136,3 +136,12 @@
     }
   }
 }
+
+.flex-layout_inner-divider {
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 64px;
+  z-index: 1;
+}
