@@ -1,27 +1,27 @@
 @extends('layouts.app')
 @php
-  $hero = get_field('404_background', 'option');
-  $padding = get_field('404_padding', 'option');
+$background = get_field('404_background', 'option');
+$padding = get_field('404_padding', 'option');
+$text = get_field('404_text', 'option');
 @endphp
-
 @section('content')
   <section id="hero_404"
-      class="page-hero flex-layout flex-layout_hero bg-{{ $hero['color'] }} {{ $padding }}"
-      {!! isset($hero['image']) && $hero['image'] ? 'style="background-image: url(' . $hero['image']['url'] . '); background-size: cover; background-position: center;"' : '' !!}>
-      @if ($hero['overlay'])
-          <div class="flex-layout_overlay"
-              style="background-color: {{ $hero['overlay']['color'] }}; opacity: {{ $hero['overlay']['opacity'] }};">
-          </div>
-      @endif
-      <div class="container-xxl">
-          <div class="row">
-              <div class="col text-{{ $hero['color'] }}">
-                  <h1 class="mb-3">-404</h1>
-                  <h2 class="mb-3">Houston, <br/>We have a problem.</h2>
-                  <p id="hero_404_subheading" class="mb-3">It seems that you're stuck in tree. <br/> Let us help you get out and back in your owner arms.</p>
-                  <a href="{{ get_site_url() }}" class="btn action-btn">Take me home</a>
-              </div>
-          </div>
+    class="page-hero flex-layout flex-layout_hero bg-{{ $background['color'] }} {{ $padding }}"
+    {!! isset($background['image']) && $background['image'] ? 'style="background-image: url(' . $background['image']['url'] . '); background-size: cover; background-position: center;"' : '' !!}>
+    @if ($background['overlay'])
+      <div class="flex-layout_overlay"
+        style="background-color: {{ $background['overlay']['color'] }}; opacity: {{ $background['overlay']['opacity'] }};">
       </div>
+    @endif
+    <div class="container-xxl">
+      <div class="row">
+        <div class="col text-{{ $text['alignment'] }} text-{{ $text['color'] }}">
+          <h1 class="mb-3">404</h1>
+          <h2 class="mb-3">Page Not Found</h2>
+          <p id="hero_404_subheading" class="mb-3">This page you are looking for doesn’t exist, or has been moved.</p>
+          <a href="{{ get_site_url() }}" class="btn btn-primary">Take Me Home</a>
+        </div>
+      </div>
+    </div>
   </section>
 @endsection
