@@ -1,0 +1,19 @@
+#404_team {
+  &_subheading {
+    font-family: $font_heading, sans-serif;
+    font-size: 1.25rem;
+  }
+}
+
+#hero_404 {
+  .action-btn {
+    background-color: $primary;
+    color: $white;
+
+    &:hover {
+      background-color: $secondary;
+      border: 1px solid $primary;
+      transition: all 0.25s all;
+    }
+  }
+}
