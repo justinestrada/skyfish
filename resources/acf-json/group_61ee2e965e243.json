@@ -450,6 +450,11 @@
                 "param": "post_template",
                 "operator": "==",
                 "value": "default"
+            },
+            {
+                "param": "page_type",
+                "operator": "!=",
+                "value": "posts_page"
             }
         ]
     ],
@@ -462,5 +467,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1645597434
+    "modified": 1646340175
 }
