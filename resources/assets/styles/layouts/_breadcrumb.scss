@@ -1,0 +1,10 @@
+
+.breadcrumb_links li {
+  display: inline-block;
+  font-size: 0.825rem;
+  margin-right: 0.5rem;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

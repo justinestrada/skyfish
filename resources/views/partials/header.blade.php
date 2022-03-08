@@ -1,6 +1,6 @@
 <style>
 @media (min-width: 992px) {
-  header>nav .main-nav-menu-items {
+  header > nav .main-nav-menu-items {
     column-gap: 1rem;
   }
 }
