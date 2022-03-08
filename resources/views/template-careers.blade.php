@@ -11,7 +11,7 @@
       @include('partials.page-header')
       <section class="container bg-black relative text-white pt-5 px-lg-5 mb-lg-10">
         <div class="row justify-content-center mb-5">
-          <div class="col fs-lg-1.25">
+          <div class="col fs-lg-1.25x">
             {!! get_the_content() !!}
           </div>
         </div>

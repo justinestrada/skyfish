@@ -2517,6 +2517,15 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_621f3ace8346a": {
+                    "key": "layout_621f3ace8346a",
+                    "name": "divider",
+                    "label": "Divider",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Layout",
@@ -2529,7 +2538,12 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "post"
+                "value": "page"
+            },
+            {
+                "param": "page_type",
+                "operator": "!=",
+                "value": "posts_page"
             }
         ]
     ],
@@ -2542,5 +2556,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1645561500
+    "modified": 1646715444
 }
