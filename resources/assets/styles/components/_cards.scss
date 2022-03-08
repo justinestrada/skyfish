@@ -5,4 +5,18 @@ a.card {
 
 .card {
   border-radius: 0;
+
+  &_rounded {
+    border-radius: 0.25rem;
+  }
+}
+
+.card_blog {
+  .entry-title {
+    display: -webkit-box;
+    min-height: 74px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 }

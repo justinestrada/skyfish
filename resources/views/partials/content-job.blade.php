@@ -2,7 +2,7 @@
 <div class="page-header relative mb-5" style="z-index: 1;">
   <div class="container py-5 text-center text-black">
     <h1 class="d-none">{!! App::title() !!}</h1>
-    <div class="h1 fs-2.5 mb-4">We're Hiring!</div>
+    <div class="h1 fs-2.5x mb-4">We're Hiring!</div>
     <h2 class="mb-0">Skyfish is building <br class="d-none d-lg-block"/>the next generation of drone technology.</h2>
   </div>
 </div>
@@ -25,7 +25,7 @@
       <div>Posted on {!! get_the_date() !!}</div>
     </div>
   </div>
-  <div class="fs-lg-1.25 mb-5">
+  <div class="fs-lg-1.25x mb-5">
     {!! get_the_content() !!}
   </div>
   <section id="job-apply-form" class="pb-5">
