@@ -12,7 +12,7 @@
     </h3>
     @include('partials/entry-meta')
     <div class="entry-summary">
-      @php the_excerpt() @endphp
+      {{ get_the_excerpt() }}
     </div>
     <a href="{{ $permalink }}" class="btn btn-secondary-underline">Read More &raquo;</a>
   </div>

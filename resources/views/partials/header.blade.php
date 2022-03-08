@@ -27,11 +27,11 @@
           ]) !!}
         @endif
         <div class="d-none d-lg-block">
-          {{-- <img src="{{ App\asset_path('images/american-made.png') }}" alt="American Made" style="height: 32px;" /> --}}
-          <a href="#" class="btn btn-transparent text-white" style="display: flex;">
+          <img src="{{ App\asset_path('images/american-made.png') }}" alt="American Made" style="height: 32px;" />
+          {{-- <a href="#" class="btn btn-transparent text-white" style="display: flex;">
             <i class="fa fa-user mr-3" style="position: relative; top: 2px;" aria-hidden="true"></i>
             Account
-          </a>
+          </a> --}}
         </div>
       </div>
     </div>
