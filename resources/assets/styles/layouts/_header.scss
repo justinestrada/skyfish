@@ -157,6 +157,11 @@ header {
         }
 
         .menu-item {
+          &:hover,
+          &:focus {
+            background-color: $primary;
+          }
+
           @media (min-width: 992px) {
             &.menu-item-has-children:hover .sub-menu,
             &.menu-item-has-children:focus .sub-menu {
@@ -193,6 +198,7 @@ header {
           padding: 0;
           text-align: center;
           display: none;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25), 0 2px 10px 0 rgba(0, 0, 0, 0.125);
 
           @media (min-width: 992px) {
             position: absolute;
