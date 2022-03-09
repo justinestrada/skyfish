@@ -1,5 +1,9 @@
 
-<section id="solutions" class="bg-black py-10">
+@php
+$page_header = get_field('page_header', get_queried_object_id());
+$page_header = isset($page_header['page_header']) ? $page_header['page_header'] : $page_header;
+@endphp
+<section id="solutions" class="bg-{{ $page_header['background']['color'] }} pt-5 pb-10">
   <div class="container-xxl">
     <div class="pillars bg-black row">
       @if ($solutions = get_field('solutions'))

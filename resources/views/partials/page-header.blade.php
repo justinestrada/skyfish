@@ -2,6 +2,7 @@
 @php
 $page_id = is_home() ? get_queried_object_id() : get_the_ID();
 $page_header = get_field('page_header', $page_id);
+$page_header = isset($page_header['page_header']) ? $page_header['page_header'] : $page_header;
 $page_header['margin_bottom'] = $page_header['margin_bottom'] ?? '';
 $page_header['text'] = $page_header['text'] ?? [
   'alignment' => 'center',
@@ -16,7 +17,7 @@ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $page_id ), 'single
     <div class="row justify-content-center">
       <div class="col-lg-8 col-xl-6">
         <h1 class="mb-4">{!! App::title() !!}</h1>
-        @if (isset($page_header['subheading']))
+        @if (isset($page_header['subheading']) && $page_header['subheading'] !== '')
           <p class="fs-1.25x mb-0">{!! $page_header['subheading'] !!}</p>
         @endif
       </div>
