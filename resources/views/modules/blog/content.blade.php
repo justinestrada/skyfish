@@ -1,10 +1,4 @@
 
-<style>
-.btn-secondary-underline {
-  padding-left: 0.125rem;
-  border-bottom: 2px solid #161826;
-}
-</style>
 @php
 $page_header = get_field('page_header', get_queried_object_id());
 @endphp
