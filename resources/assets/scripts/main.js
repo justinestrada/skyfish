@@ -26,6 +26,7 @@ jQuery(document).ready(() => routes.loadEvents());
 import { Header } from './layouts/header'
 import { Hero } from './layouts/hero'
 import { Flex } from './layouts/Flex'
+import { FAQ } from './layouts/faq'
 import { Solutions } from './modules/Solutions'
 
 jQuery(document).ready(function() {
@@ -33,4 +34,5 @@ jQuery(document).ready(function() {
   Hero.onLoad()
   Flex.onLoad()
   Solutions.onLoad()
+  FAQ.onLoad()
 })
