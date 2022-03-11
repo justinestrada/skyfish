@@ -213,7 +213,7 @@ header {
             text-align: left;
             color: $gray;
             background-color: $white;
-            padding: 24px 16px;
+            padding: 16px;
 
             &:hover,
             &:focus {
@@ -229,8 +229,24 @@ header {
           .menu-item-tier-2 {
             &_wrap {
               display: flex;
+              width: 100%;
+
+              &_img {
+                height: 56px;
+                width: 88px;
+
+                img {
+                  height: 56px;
+                  width: 88px;
+                  object-fit: cover;
+                }
+              }
 
               &_content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
                 & img {
                   margin: 0;
                 }

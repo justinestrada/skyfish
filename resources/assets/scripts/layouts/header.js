@@ -27,41 +27,41 @@ export const Header = {
     })
   },
   subMenuWidth: function() {
-    const menu_menu = $('#menu-main')
-    if (!menu_menu.length) {
+    const $menu_menu = $('#menu-main, #menu-menu-1')
+    if (!$menu_menu.length) {
       return
     }
-    $('> li', menu_menu).map((i, e)=>{
+    $('> li', $menu_menu).map((i, e) => {
       let sub_menu = $('ul.sub-menu', e);
       if (!sub_menu.length) {
         return;
       }
       if($(window).width() > 991) {  
-        sub_menu.css('width', Math.round(menu_menu.width())+'px')
-        sub_menu.css('left', Math.round(menu_menu.position().left)+'px')
+        sub_menu.css('width', Math.round($menu_menu.width()) + 'px')
+        sub_menu.css('left', Math.round($menu_menu.position().left) + 'px')
       } else {
         sub_menu.removeAttr('style')
       }
     })
   },
   makeMenuResponsive: function() {
-    const menu_menu = $('#menu-main')
-    if (!menu_menu.length) {
+    const $menu_menu = $('#menu-main')
+    if (!$menu_menu.length) {
       return
     }
-    if($(window).width() > 991) { 
+    if ($(window).width() > 991) { 
       return;
     }
-    $('> li', menu_menu).map((i, e)=>{
+    $('> li', $menu_menu).map((i, e) => {
       let sub_menu = $('ul.sub-menu', e);
       if (!sub_menu.length) {
         return;
       }
       $(e).off('click')
-      $(e).on('click', (itemClick)=>{
+      $(e).on('click', (itemClick) => {
         let itemCicked = $(itemClick.currentTarget); 
         itemClick.preventDefault()
-        $('> li', menu_menu).map((_, siblings)=>{
+        $('> li', $menu_menu).map((_, siblings) => {
           if($(siblings).hasClass('active_slide') && itemCicked.attr('id') != $(siblings).attr('id')) {
             $('ul.sub-menu', siblings).slideUp()
             $(siblings).removeClass('active_slide')

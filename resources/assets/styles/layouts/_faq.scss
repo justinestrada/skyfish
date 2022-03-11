@@ -1,0 +1,61 @@
+.faq_search_container {
+  background: #fff;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 50px;
+
+  .faq_searchbar {
+    border: 0;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .faq_search_action {
+    background-color: transparent;
+    border: 0;
+  }
+}
+
+.faq_categories {
+  .card {
+    &::before {
+      inset: 0;
+      content: "";
+      position: absolute;
+      border-width: 2px;
+      border-style: solid;
+      border-image-slice: 1;
+      border-image-source: linear-gradient(to left, #f44518, #9e9e9e);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out 0s;
+    }
+
+    &.active,
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    .card-img {
+      width: 48px;
+    }
+  }
+}
+
+#qaAccordion {
+  display: none;
+
+  .accordion-button {
+    color: inherit;
+    background-color: transparent;
+
+    &:not(.collapsed) {
+      color: $primary;
+      background-color: transparent;
+      box-shadow: inset 0 -1px 0 $primary;
+    }
+  }
+}

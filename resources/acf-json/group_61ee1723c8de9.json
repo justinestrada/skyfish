@@ -558,8 +558,8 @@
                             "allow_null": 0,
                             "multiple": 0,
                             "ui": 0,
-                            "ajax": 0,
                             "return_format": "value",
+                            "ajax": 0,
                             "placeholder": ""
                         },
                         {
@@ -585,8 +585,8 @@
                             "allow_null": 0,
                             "multiple": 0,
                             "ui": 0,
-                            "ajax": 0,
                             "return_format": "value",
+                            "ajax": 0,
                             "placeholder": ""
                         },
                         {
@@ -695,8 +695,8 @@
                                             "allow_null": 0,
                                             "multiple": 0,
                                             "ui": 0,
-                                            "ajax": 0,
                                             "return_format": "value",
+                                            "ajax": 0,
                                             "placeholder": ""
                                         },
                                         {

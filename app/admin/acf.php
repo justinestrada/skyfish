@@ -33,3 +33,15 @@ if ( function_exists('acf_add_options_page') ) {
     'redirect'		=> false
   ));
 }
+
+function acf_load_qa_category_field_choices( $field ) {
+  $categories = get_field('faq_categories_container');
+  if ($categories && isset($categories['faq_categories'])) {
+    foreach( $categories['faq_categories'] as $choice ) {
+      $field['choices'][str_replace('_', ' ', trim($choice['category']))] = $choice['category'];  
+    }
+  }
+  // return the field
+  return $field;
+}
+add_filter('acf/load_field/name=qa_category', 'acf_load_qa_category_field_choices');
