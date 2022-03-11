@@ -16,10 +16,10 @@ export const FAQ = {
       const category = $(this).attr('data-category')
       let founded = 0;
       $('#qaAccordion .accordion-item').map((i, e) => {
-        if ($(e).attr('data-category') == category) {
+        if ($(e).attr('data-category').toLowerCase() !== category.toLowerCase()) {
           $(e).slideUp()
         } else {
-          founded++
+          founded = founded+1
           $(e).slideDown()
         }
       })
@@ -42,7 +42,7 @@ export const FAQ = {
       $('#qaAccordion').slideDown()
       let founded = 0
       $('#qaAccordion .accordion-item').map((i, e) => {
-        if ($(e).attr('data-question').includes(search) || $(e).attr('data-answer').includes(search) || $(e).attr('data-category').includes(search) ) {
+        if ($(e).attr('data-question').toLowerCase().includes(search.toLowerCase()) || $(e).attr('data-answer').toLowerCase().includes(search.toLowerCase()) || $(e).attr('data-category').toLowerCase().includes(search.toLowerCase()) ) {
           $(e).slideDown()
           founded++
         } else {
