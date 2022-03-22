@@ -9,6 +9,5 @@
     @include('partials.page-header')
     @include('modules.template-solutions.content')
     {{-- @include('partials.flex-layouts') --}}
-    @include('partials.contact')
   @endwhile
 @endsection
