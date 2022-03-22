@@ -28,6 +28,7 @@ import { Hero } from './layouts/hero'
 import { Flex } from './layouts/Flex'
 import { FAQ } from './layouts/faq'
 import { Solutions } from './modules/Solutions'
+import { GF_Form_Group } from './modules/gf_form_group';
 
 jQuery(document).ready(function() {
   Header.onLoad()
@@ -35,4 +36,5 @@ jQuery(document).ready(function() {
   Flex.onLoad()
   Solutions.onLoad()
   FAQ.onLoad()
+  GF_Form_Group.onLoad()
 })
