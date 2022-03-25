@@ -30,8 +30,6 @@
   </div>
   <section id="job-apply-form" class="pb-5">
     <h2>Ready To Start?</h2>
-    <form action="">
-      <button type="submit" disabled>Apply</button>
-    </form>
+    {!! do_shortcode(get_field('apply_form_shortcode'))!!}
   </section>
 </section>
