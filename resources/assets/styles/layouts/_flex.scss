@@ -137,6 +137,36 @@
   }
 }
 
+.info-cards {
+  .card a {
+    &::before {
+      inset: 0;
+      content: "";
+      position: absolute;
+      border-width: 2px;
+      border-style: solid;
+      border-image-slice: 1;
+      border-image-source: linear-gradient(to left, #f44518, #9e9e9e);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out 0s;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  .card-img {
+    width: 48px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
 .contact-form {
   .gform_title {
     @extend .mb-4;
