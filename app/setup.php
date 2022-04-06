@@ -23,6 +23,10 @@ add_action('wp_enqueue_scripts', function () {
   }
 }, 100);
 
+add_action( 'login_enqueue_scripts', function () {
+  wp_enqueue_style( 'custom-login', get_site_url().'/wp-content/themes/skyfish/resources/assets/styles/admin-main.css', false, null );
+});
+
 /**
  * Theme setup
  */

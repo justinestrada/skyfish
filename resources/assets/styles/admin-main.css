@@ -1,0 +1,86 @@
+body {
+  background-color: #161826;
+}
+
+.login h1 a {
+  background-image: url(./../images/logo.png);
+  background-image: none, url(./../images/logo.png);
+  width: 180px;
+  background-size: contain;
+  background-position: center;
+}
+
+.login form {
+  background-color: transparent;
+  border: 0px;
+  padding: 0;
+  box-shadow: 0 0 0 0;
+}
+
+label {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+input#user_login,
+input#user_pass {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 44px;
+  color: inherit;
+  padding: 8px 15px;
+  border: 0;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+input#user_login:focus,
+input#user_pass:focus {
+  box-shadow: 0 0 0 0;
+}
+
+p.forgetmenot {
+  margin-top: 9px;
+}
+
+input#rememberme {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+input#rememberme:focus {
+  border-color: #f44418;
+  box-shadow: 0 0 0 1px #f44418;
+}
+
+input#wp-submit {
+  color: #fff;
+  background-color: #f44418;
+  border-color: #f44418;
+  border-radius: 0;
+}
+
+.login #backtoblog a,
+.login #nav a {
+  color: #f44418;
+}
+
+.login .button.wp-hide-pw {
+  color: #f44418;
+}
+
+.login .button.wp-hide-pw:focus {
+  background: 0 0;
+  border-color: #f44418;
+  box-shadow: 0 0 0 1px #f44418;
+  outline: 2px solid transparent;
+}
+
+.login #login_error,
+.login .message,
+.login .success {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-left: 4px solid #f44418;
+}
