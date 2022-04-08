@@ -13,7 +13,7 @@ $text_alignment = get_sub_field('text_alignment');
                 @foreach ($cards as $key => $card)
                     <div class="col-lg-6">
                       <div class="card bg-black p-2 mb-3 mb-lg-1">
-                        <a class="d-flex flex-row align-items-center text-white" href="{{ $card['url'] ? $card['url'] : 'javascript:void(0)' }}" download>
+                        <a class="d-flex flex-row align-items-center text-white text-decoration-none" href="{{ $card['url'] ? $card['url'] : 'javascript:void(0)' }}" download>
                           <div class="card-img-container">
                               <img class="card-img" src="{{ $card['image']['url'] }}"
                                   alt="{{ $card['heading'] }}" />
