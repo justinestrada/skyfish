@@ -5,32 +5,35 @@ $padding_bottom = get_sub_field('padding_bottom');
 $text_alignment = get_sub_field('text_alignment');
 @endphp
 <section id="flex-layout_{{ $layout_key }}"
-    class="flex-layout info-cards bg-{{ $background['color'] }} {{ $padding_top }} {{ $padding_bottom }}"
-    {!! isset($background['image']) && $background['image'] ? 'style="background-image: url(' . $background['image']['url'] . '); background-size: ' . $background['image_size'] . '; background-position: ' . $background['image_position'] . ';"' : '' !!}>
-    <div class="container-xxl">
-        <div class="row">
-            @if ($cards = get_sub_field('cards'))
-                @foreach ($cards as $key => $card)
-                    <div class="col-lg-6">
-                      <div class="card bg-black p-2 mb-3 mb-lg-1">
-                        <a class="d-flex flex-row align-items-center text-white text-decoration-none" href="{{ $card['url'] ? $card['url'] : 'javascript:void(0)' }}" download>
-                          <div class="card-img-container">
-                              <img class="card-img" src="{{ $card['image']['url'] }}"
-                                  alt="{{ $card['heading'] }}" />
-                          </div>
-                          <div class="card-body w-75 text-{{ $text_alignment }} text-white">
-                              @if ($card['heading'])
-                                  <h5 class="card-title m-0">{{ $card['heading'] }}</h5>
-                              @endif
-                              @if ($card['content'])
-                                  <div class="card-text card-content">{!! $card['content'] !!}</div>
-                              @endif
-                          </div>
-                      </a>
-                      </div>
+  class="flex-layout info-cards bg-{{ $background['color'] }} {{ $padding_top }} {{ $padding_bottom }}"
+  {!! isset($background['image']) && $background['image'] ? 'style="background-image: url(' . $background['image']['url'] . '); background-size: ' . $background['image_size'] . '; background-position: ' . $background['image_position'] . ';"' : '' !!}>
+  <div class="container-xxl">
+    <div class="row">
+      @if ($cards = get_sub_field('cards'))
+        @foreach ($cards as $key => $card)
+          <div class="col-lg-6 mb-3">
+            <a class="card card-info bg-black" href="{{ $card['url'] ? $card['url'] : 'javascript:void(0)' }}" {{ $card['url'] ? 'download' : '' }}>
+              <div class="card-body text-{{ $text_alignment }} text-white">
+                <div class="row">
+                  @if ($card['image'])
+                    <div class="col-2">
+                      <img src="{{ $card['image']['url'] }}" alt="{{ $card['heading'] }}" class="w-100"/>
                     </div>
-                @endforeach
-            @endif
-        </div>
+                  @endif
+                  <div class="col-10 d-flex align-items-center">
+                    @if ($card['heading'])
+                      <h5 class="card-title m-0">{{ $card['heading'] }}</h5>
+                    @endif
+                    @if ($card['content'])
+                      <div class="card-text card-content">{!! $card['content'] !!}</div>
+                    @endif
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        @endforeach
+      @endif
     </div>
+  </div>
 </section>
