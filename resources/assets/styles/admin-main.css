@@ -1,5 +1,10 @@
 body {
+  display: flex;
   background-color: #161826;
+}
+
+body #login {
+  padding-top: 0;
 }
 
 .login h1 a {
@@ -83,4 +88,8 @@ input#wp-submit {
   background-color: rgba(0, 0, 0, 0.6);
   color: #fff;
   border-left: 4px solid #f44418;
+}
+
+a.privacy-policy-link {
+  color: white;
 }
