@@ -12,7 +12,7 @@ $text_alignment = get_sub_field('text_alignment');
       @if ($cards = get_sub_field('cards'))
         @foreach ($cards as $key => $card)
           <div class="col-lg-6 mb-3">
-            <a class="card card-info bg-black" href="{{ $card['url'] ? $card['url'] : 'javascript:void(0)' }}" {{ $card['url'] ? 'download' : '' }}>
+            <a class="card card-info bg-black" href="{{ $card['url'] ? $card['url'] : 'javascript:void(0)' }}" {{ str_contains($card['url'], '.pdf') ? 'download' : '' }}>
               <div class="card-body text-{{ $text_alignment }} text-white">
                 <div class="row">
                   @if ($card['image'])
