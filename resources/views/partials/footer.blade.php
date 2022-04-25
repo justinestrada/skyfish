@@ -57,7 +57,7 @@
           <div class="col-lg mb-3 mb-lg-0">
             <h5 class="footer_menu-heading">{!! $menu['heading'] !!}</h5>
             @foreach($menu['links'] as $link)
-              <a href="{{ $link['link']['url'] }}" class="footer_link">
+              <a href="{{ $link['link']['url'] }}" class="footer_link" {{ $link['link']['target'] !== '' ? 'target="' . $link['link']['target'] . '"' : '' }}>
                 {!! $link['link']['title'] !!}
               </a>
             @endforeach
